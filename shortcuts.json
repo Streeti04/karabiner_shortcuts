@@ -1,0 +1,1137 @@
+{
+    "description": "Windows/Linux Shortcuts for Mac (Browser, AltGr, Ctrl+A/F/C/V/X/Z, Option-Search)",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.brave\\.Browser$",
+                        "^com\\.google\\.Chrome$",
+                        "^org\\.mozilla\\.firefox$",
+                        "^com\\.apple\\.Safari$",
+                        "^com\\.microsoft\\.edgemac$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Browser: Control + Q/W/L to Command + Q/W/L",
+            "from": {
+                "key_code": "q",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "q",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.brave\\.Browser$",
+                        "^com\\.google\\.Chrome$",
+                        "^org\\.mozilla\\.firefox$",
+                        "^com\\.apple\\.Safari$",
+                        "^com\\.microsoft\\.edgemac$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "from": {
+                "key_code": "w",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "w",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.brave\\.Browser$",
+                        "^com\\.google\\.Chrome$",
+                        "^org\\.mozilla\\.firefox$",
+                        "^com\\.apple\\.Safari$",
+                        "^com\\.microsoft\\.edgemac$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "from": {
+                "key_code": "l",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "l",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Tap Left Option to open Spotlight Search (Cmd+Space), hold for Option",
+            "from": {
+                "key_code": "left_option",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "key_code": "left_option" }],
+            "to_if_alone": [
+                {
+                    "key_code": "spacebar",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Windows AltGr (Right Option) + Q -> @",
+            "from": {
+                "key_code": "q",
+                "modifiers": {
+                    "mandatory": ["right_option"],
+                    "optional": ["caps_lock"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "l",
+                    "modifiers": ["right_option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Windows AltGr + 7 -> {",
+            "from": {
+                "key_code": "7",
+                "modifiers": {
+                    "mandatory": ["right_option"],
+                    "optional": ["caps_lock"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "8",
+                    "modifiers": ["right_option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Windows AltGr + 8 -> [",
+            "from": {
+                "key_code": "8",
+                "modifiers": {
+                    "mandatory": ["right_option"],
+                    "optional": ["caps_lock"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "5",
+                    "modifiers": ["right_option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Windows AltGr + 9 -> ]",
+            "from": {
+                "key_code": "9",
+                "modifiers": {
+                    "mandatory": ["right_option"],
+                    "optional": ["caps_lock"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "6",
+                    "modifiers": ["right_option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Windows AltGr + 0 -> }",
+            "from": {
+                "key_code": "0",
+                "modifiers": {
+                    "mandatory": ["right_option"],
+                    "optional": ["caps_lock"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "9",
+                    "modifiers": ["right_option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Windows AltGr + ß -> \\ (Backslash)",
+            "from": {
+                "key_code": "hyphen",
+                "modifiers": {
+                    "mandatory": ["right_option"],
+                    "optional": ["caps_lock"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "7",
+                    "modifiers": ["right_option", "left_shift"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Windows AltGr + + -> ~ (Tilde)",
+            "from": {
+                "key_code": "close_bracket",
+                "modifiers": {
+                    "mandatory": ["right_option"],
+                    "optional": ["caps_lock"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "n",
+                    "modifiers": ["right_option"]
+                },
+                { "key_code": "spacebar" }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Windows AltGr + < -> | (Pipe)",
+            "from": {
+                "key_code": "non_us_backslash",
+                "modifiers": {
+                    "mandatory": ["right_option"],
+                    "optional": ["caps_lock"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "7",
+                    "modifiers": ["right_option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Swap Control and Command for A and F system-wide (A)",
+            "from": {
+                "key_code": "a",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "a",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Swap Control and Command for A and F system-wide (F)",
+            "from": {
+                "key_code": "f",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "f",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Swap Command to Control for A and F (A)",
+            "from": {
+                "key_code": "a",
+                "modifiers": {
+                    "mandatory": ["command"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "a",
+                    "modifiers": ["control"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Swap Command to Control for A and F (F)",
+            "from": {
+                "key_code": "f",
+                "modifiers": {
+                    "mandatory": ["command"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "f",
+                    "modifiers": ["control"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Terminal: Control+Shift+X to Cmd+X",
+            "from": {
+                "key_code": "x",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "x",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Terminal: Control+Shift+C to Cmd+C",
+            "from": {
+                "key_code": "c",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "c",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Terminal: Control+Shift+V to Cmd+V",
+            "from": {
+                "key_code": "v",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "v",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+X to Cmd+X (unless Terminal)",
+            "from": {
+                "key_code": "x",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "x",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+C to Cmd+C (unless Terminal)",
+            "from": {
+                "key_code": "c",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "c",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+V to Cmd+V (unless Terminal)",
+            "from": {
+                "key_code": "v",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "v",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Terminal: Control+Shift+Z (QWERTZ physical Z) to Cmd+Z",
+            "from": {
+                "key_code": "y",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "y",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+Z (QWERTZ physical Z) to Cmd+Z (unless Terminal)",
+            "from": {
+                "key_code": "y",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "y",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Terminal: Control+Shift+Y (QWERTZ physical Y) to Cmd+Y",
+            "from": {
+                "key_code": "z",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "z",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+S to Cmd+S (unless Terminal)",
+            "from": {
+                "key_code": "s",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "s",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+P to Cmd+P (unless Terminal)",
+            "from": {
+                "key_code": "p",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "p",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+N to Cmd+N (unless Terminal)",
+            "from": {
+                "key_code": "n",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "n",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+O to Cmd+O (unless Terminal)",
+            "from": {
+                "key_code": "o",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "o",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+T to Cmd+T (unless Terminal)",
+            "from": {
+                "key_code": "t",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "t",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+Shift+T to Cmd+Shift+T (unless Terminal)",
+            "from": {
+                "key_code": "t",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "t",
+                    "modifiers": ["command", "shift"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+Left Arrow to Option+Left Arrow (unless Terminal)",
+            "from": {
+                "key_code": "left_arrow",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_arrow",
+                    "modifiers": ["option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+Right Arrow to Option+Right Arrow (unless Terminal)",
+            "from": {
+                "key_code": "right_arrow",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "right_arrow",
+                    "modifiers": ["option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+Shift+Left Arrow to Option+Shift+Left Arrow (unless Terminal)",
+            "from": {
+                "key_code": "left_arrow",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_arrow",
+                    "modifiers": ["option", "shift"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+Shift+Right Arrow to Option+Shift+Right Arrow (unless Terminal)",
+            "from": {
+                "key_code": "right_arrow",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "right_arrow",
+                    "modifiers": ["option", "shift"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+Backspace to Option+Backspace (unless Terminal)",
+            "from": {
+                "key_code": "delete_or_backspace",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": ["option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "System-wide: Option (Alt) + F4 (Launchpad) to Cmd+Q",
+            "from": {
+                "key_code": "launchpad",
+                "modifiers": {
+                    "mandatory": ["option"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "q",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "System-wide: Option + fn+F4 back to Launchpad/Spotlight (Fallback)",
+            "from": {
+                "key_code": "f4",
+                "modifiers": {
+                    "mandatory": ["option"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [{ "key_code": "launchpad" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.brave\\.Browser$",
+                        "^com\\.google\\.Chrome$",
+                        "^org\\.mozilla\\.firefox$",
+                        "^com\\.apple\\.Safari$",
+                        "^com\\.microsoft\\.edgemac$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Browser: F5 (Illumination Down) to Cmd+R",
+            "from": {
+                "key_code": "illumination_decrement",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [
+                {
+                    "key_code": "r",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.brave\\.Browser$",
+                        "^com\\.google\\.Chrome$",
+                        "^org\\.mozilla\\.firefox$",
+                        "^com\\.apple\\.Safari$",
+                        "^com\\.microsoft\\.edgemac$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Browser: fn+F5 back to Illumination Down",
+            "from": {
+                "key_code": "f5",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "key_code": "illumination_decrement" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.brave\\.Browser$",
+                        "^com\\.google\\.Chrome$",
+                        "^org\\.mozilla\\.firefox$",
+                        "^com\\.apple\\.Safari$",
+                        "^com\\.microsoft\\.edgemac$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Browser: F11 (Volume Down) to Fullscreen (Cmd+Ctrl+F)",
+            "from": {
+                "key_code": "volume_decrement",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [
+                {
+                    "key_code": "f",
+                    "modifiers": ["command", "control"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.brave\\.Browser$",
+                        "^com\\.google\\.Chrome$",
+                        "^org\\.mozilla\\.firefox$",
+                        "^com\\.apple\\.Safari$",
+                        "^com\\.microsoft\\.edgemac$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Browser: fn+F11 back to Volume Down",
+            "from": {
+                "key_code": "f11",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "key_code": "volume_decrement" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.brave\\.Browser$",
+                        "^com\\.google\\.Chrome$",
+                        "^org\\.mozilla\\.firefox$",
+                        "^com\\.apple\\.Safari$",
+                        "^com\\.microsoft\\.edgemac$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Browser: F12 (Volume Up) to Developer Tools (Cmd+Option+I)",
+            "from": {
+                "key_code": "volume_increment",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [
+                {
+                    "key_code": "i",
+                    "modifiers": ["command", "option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.brave\\.Browser$",
+                        "^com\\.google\\.Chrome$",
+                        "^org\\.mozilla\\.firefox$",
+                        "^com\\.apple\\.Safari$",
+                        "^com\\.microsoft\\.edgemac$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "Browser: fn+F12 back to Volume Up",
+            "from": {
+                "key_code": "f12",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "key_code": "volume_increment" }],
+            "type": "basic"
+        },
+        {
+            "description": "System-wide: Command (Win) + L to Lock Screen (Ctrl+Cmd+Q)",
+            "from": {
+                "key_code": "l",
+                "modifiers": {
+                    "mandatory": ["command"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "q",
+                    "modifiers": ["control", "command"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
