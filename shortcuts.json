@@ -802,70 +802,6 @@
                     "type": "frontmost_application_unless"
                 }
             ],
-            "description": "System-wide: Control+Left Arrow to Option+Left Arrow (unless Terminal)",
-            "from": {
-                "key_code": "left_arrow",
-                "modifiers": {
-                    "mandatory": ["control"],
-                    "optional": ["any"]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "left_arrow",
-                    "modifiers": ["option"]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "bundle_identifiers": [
-                        "^com\\.apple\\.Terminal$",
-                        "^com\\.googlecode\\.iterm2$",
-                        "^co\\.zeit\\.hyperterm$",
-                        "^co\\.zeit\\.hyper$",
-                        "^io\\.alacritty$",
-                        "^org\\.alacritty$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^com\\.mitchellh\\.ghostty$"
-                    ],
-                    "type": "frontmost_application_unless"
-                }
-            ],
-            "description": "System-wide: Control+Right Arrow to Option+Right Arrow (unless Terminal)",
-            "from": {
-                "key_code": "right_arrow",
-                "modifiers": {
-                    "mandatory": ["control"],
-                    "optional": ["any"]
-                }
-            },
-            "to": [
-                {
-                    "key_code": "right_arrow",
-                    "modifiers": ["option"]
-                }
-            ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "bundle_identifiers": [
-                        "^com\\.apple\\.Terminal$",
-                        "^com\\.googlecode\\.iterm2$",
-                        "^co\\.zeit\\.hyperterm$",
-                        "^co\\.zeit\\.hyper$",
-                        "^io\\.alacritty$",
-                        "^org\\.alacritty$",
-                        "^net\\.kovidgoyal\\.kitty$",
-                        "^com\\.mitchellh\\.ghostty$"
-                    ],
-                    "type": "frontmost_application_unless"
-                }
-            ],
             "description": "System-wide: Control+Shift+Left Arrow to Option+Shift+Left Arrow (unless Terminal)",
             "from": {
                 "key_code": "left_arrow",
@@ -964,18 +900,6 @@
             "type": "basic"
         },
         {
-            "description": "System-wide: Option + fn+F4 back to Launchpad/Spotlight (Fallback)",
-            "from": {
-                "key_code": "f4",
-                "modifiers": {
-                    "mandatory": ["option"],
-                    "optional": ["any"]
-                }
-            },
-            "to": [{ "key_code": "launchpad" }],
-            "type": "basic"
-        },
-        {
             "conditions": [
                 {
                     "bundle_identifiers": [
@@ -999,27 +923,6 @@
                     "modifiers": ["command"]
                 }
             ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "bundle_identifiers": [
-                        "^com\\.brave\\.Browser$",
-                        "^com\\.google\\.Chrome$",
-                        "^org\\.mozilla\\.firefox$",
-                        "^com\\.apple\\.Safari$",
-                        "^com\\.microsoft\\.edgemac$"
-                    ],
-                    "type": "frontmost_application_if"
-                }
-            ],
-            "description": "Browser: fn+F5 back to Illumination Down",
-            "from": {
-                "key_code": "f5",
-                "modifiers": { "optional": ["any"] }
-            },
-            "to": [{ "key_code": "illumination_decrement" }],
             "type": "basic"
         },
         {
@@ -1061,27 +964,6 @@
                     "type": "frontmost_application_if"
                 }
             ],
-            "description": "Browser: fn+F11 back to Volume Down",
-            "from": {
-                "key_code": "f11",
-                "modifiers": { "optional": ["any"] }
-            },
-            "to": [{ "key_code": "volume_decrement" }],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "bundle_identifiers": [
-                        "^com\\.brave\\.Browser$",
-                        "^com\\.google\\.Chrome$",
-                        "^org\\.mozilla\\.firefox$",
-                        "^com\\.apple\\.Safari$",
-                        "^com\\.microsoft\\.edgemac$"
-                    ],
-                    "type": "frontmost_application_if"
-                }
-            ],
             "description": "Browser: F12 (Volume Up) to Developer Tools (Cmd+Option+I)",
             "from": {
                 "key_code": "volume_increment",
@@ -1093,27 +975,6 @@
                     "modifiers": ["command", "option"]
                 }
             ],
-            "type": "basic"
-        },
-        {
-            "conditions": [
-                {
-                    "bundle_identifiers": [
-                        "^com\\.brave\\.Browser$",
-                        "^com\\.google\\.Chrome$",
-                        "^org\\.mozilla\\.firefox$",
-                        "^com\\.apple\\.Safari$",
-                        "^com\\.microsoft\\.edgemac$"
-                    ],
-                    "type": "frontmost_application_if"
-                }
-            ],
-            "description": "Browser: fn+F12 back to Volume Up",
-            "from": {
-                "key_code": "f12",
-                "modifiers": { "optional": ["any"] }
-            },
-            "to": [{ "key_code": "volume_increment" }],
             "type": "basic"
         },
         {
