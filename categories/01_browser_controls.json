@@ -19,7 +19,7 @@
                 "key_code": "q",
                 "modifiers": {
                     "mandatory": ["control"],
-                    "optional": ["any"]
+                    "optional": ["caps_lock"]
                 }
             },
             "to": [

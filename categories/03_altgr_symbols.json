@@ -7,7 +7,7 @@
                 "key_code": "q",
                 "modifiers": {
                     "mandatory": ["right_option"],
-                    "optional": ["caps_lock"]
+                    "optional": ["caps_lock", "control"]
                 }
             },
             "to": [

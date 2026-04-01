@@ -19,7 +19,7 @@
                 "key_code": "q",
                 "modifiers": {
                     "mandatory": ["control"],
-                    "optional": ["any"]
+                    "optional": ["caps_lock"]
                 }
             },
             "to": [
@@ -107,7 +107,7 @@
                 "key_code": "q",
                 "modifiers": {
                     "mandatory": ["right_option"],
-                    "optional": ["caps_lock"]
+                    "optional": ["caps_lock", "control"]
                 }
             },
             "to": [
@@ -349,7 +349,9 @@
                         "^io\\.alacritty$",
                         "^org\\.alacritty$",
                         "^net\\.kovidgoyal\\.kitty$",
-                        "^com\\.mitchellh\\.ghostty$"
+                        "^com\\.mitchellh\\.ghostty$",
+                        "^com\\.microsoft\\.VSCode$",
+                        "^com\\.microsoft\\.VSCodeInsiders$"
                     ],
                     "type": "frontmost_application_if"
                 }
@@ -445,7 +447,9 @@
                         "^io\\.alacritty$",
                         "^org\\.alacritty$",
                         "^net\\.kovidgoyal\\.kitty$",
-                        "^com\\.mitchellh\\.ghostty$"
+                        "^com\\.mitchellh\\.ghostty$",
+                        "^com\\.microsoft\\.VSCode$",
+                        "^com\\.microsoft\\.VSCodeInsiders$"
                     ],
                     "type": "frontmost_application_unless"
                 }
@@ -461,7 +465,7 @@
             "to": [
                 {
                     "key_code": "c",
-                    "modifiers": ["command"]
+                    "modifiers": ["command"] 
                 }
             ],
             "type": "basic"
