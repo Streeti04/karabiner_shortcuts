@@ -1,0 +1,101 @@
+{
+    "description": "Navigation and delete word shortcuts (except Terminal)",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+Shift+Left Arrow to Option+Shift+Left Arrow (unless Terminal)",
+            "from": {
+                "key_code": "left_arrow",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "left_arrow",
+                    "modifiers": ["option", "shift"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+Shift+Right Arrow to Option+Shift+Right Arrow (unless Terminal)",
+            "from": {
+                "key_code": "right_arrow",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "right_arrow",
+                    "modifiers": ["option", "shift"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.Terminal$",
+                        "^com\\.googlecode\\.iterm2$",
+                        "^co\\.zeit\\.hyperterm$",
+                        "^co\\.zeit\\.hyper$",
+                        "^io\\.alacritty$",
+                        "^org\\.alacritty$",
+                        "^net\\.kovidgoyal\\.kitty$",
+                        "^com\\.mitchellh\\.ghostty$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "description": "System-wide: Control+Backspace to Option+Backspace (unless Terminal)",
+            "from": {
+                "key_code": "delete_or_backspace",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": ["option"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

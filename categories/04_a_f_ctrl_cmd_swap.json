@@ -1,0 +1,73 @@
+{
+    "description": "A/F Control and Command swap",
+    "manipulators": [
+        {
+            "description": "Swap Control and Command for A and F system-wide (A)",
+            "from": {
+                "key_code": "a",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "a",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Swap Control and Command for A and F system-wide (F)",
+            "from": {
+                "key_code": "f",
+                "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "f",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Swap Command to Control for A and F (A)",
+            "from": {
+                "key_code": "a",
+                "modifiers": {
+                    "mandatory": ["command"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "a",
+                    "modifiers": ["control"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "description": "Swap Command to Control for A and F (F)",
+            "from": {
+                "key_code": "f",
+                "modifiers": {
+                    "mandatory": ["command"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "f",
+                    "modifiers": ["control"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}

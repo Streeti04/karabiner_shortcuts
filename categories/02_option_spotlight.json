@@ -1,0 +1,20 @@
+{
+    "description": "Option key behavior",
+    "manipulators": [
+        {
+            "description": "Tap Left Option to open Spotlight Search (Cmd+Space), hold for Option",
+            "from": {
+                "key_code": "left_option",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [{ "key_code": "left_option" }],
+            "to_if_alone": [
+                {
+                    "key_code": "spacebar",
+                    "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
