@@ -102,11 +102,11 @@
             "type": "basic"
         },
         {
-            "description": "Windows AltGr (Right Option) + Q -> @",
+            "description": "Windows AltGr (Right Command) + Q -> @ (via Option+L on Mac German layout)",
             "from": {
                 "key_code": "q",
                 "modifiers": {
-                    "mandatory": ["right_option"],
+                    "mandatory": ["right_command"],
                     "optional": ["caps_lock", "control"]
                 }
             },
@@ -349,14 +349,12 @@
                         "^io\\.alacritty$",
                         "^org\\.alacritty$",
                         "^net\\.kovidgoyal\\.kitty$",
-                        "^com\\.mitchellh\\.ghostty$",
-                        "^com\\.microsoft\\.VSCode$",
-                        "^com\\.microsoft\\.VSCodeInsiders$"
+                        "^com\\.mitchellh\\.ghostty$"
                     ],
                     "type": "frontmost_application_if"
                 }
             ],
-            "description": "Terminal: Control+Shift+C to Cmd+C",
+            "description": "Terminal (non-VSCode): Control+Shift+C to Cmd+C",
             "from": {
                 "key_code": "c",
                 "modifiers": {
@@ -368,6 +366,32 @@
                 {
                     "key_code": "c",
                     "modifiers": ["command"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "bundle_identifiers": [
+                        "^com\\.microsoft\\.VSCode$",
+                        "^com\\.microsoft\\.VSCodeInsiders$"
+                    ],
+                    "type": "frontmost_application_if"
+                }
+            ],
+            "description": "VSCode: Control+Shift+C -> Ctrl+C (Interrupt im integrierten Terminal)",
+            "from": {
+                "key_code": "c",
+                "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "c",
+                    "modifiers": ["control"]
                 }
             ],
             "type": "basic"
@@ -447,14 +471,12 @@
                         "^io\\.alacritty$",
                         "^org\\.alacritty$",
                         "^net\\.kovidgoyal\\.kitty$",
-                        "^com\\.mitchellh\\.ghostty$",
-                        "^com\\.microsoft\\.VSCode$",
-                        "^com\\.microsoft\\.VSCodeInsiders$"
+                        "^com\\.mitchellh\\.ghostty$"
                     ],
                     "type": "frontmost_application_unless"
                 }
             ],
-            "description": "System-wide: Control+C to Cmd+C (unless Terminal)",
+            "description": "System-wide: Control+C to Cmd+C (unless Terminal; VSCode included -> Ctrl+C = Kopieren im Editor)",
             "from": {
                 "key_code": "c",
                 "modifiers": {
@@ -465,7 +487,7 @@
             "to": [
                 {
                     "key_code": "c",
-                    "modifiers": ["command"] 
+                    "modifiers": ["command"]
                 }
             ],
             "type": "basic"
